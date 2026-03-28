@@ -14,6 +14,9 @@ import { createStore } from 'redux'
 
 import { allReducer } from '@/redux'
 
+//from i18n
+import i18n from './i18n'
+
 const store = createStore(
   allReducer,
 
