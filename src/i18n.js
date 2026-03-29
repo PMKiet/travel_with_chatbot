@@ -15,5 +15,5 @@ export default i18next
     .init({
         resources,
         lng: 'vi',
-        fallbackLng: "en",
+        fallbackLng: "en",  
     })
