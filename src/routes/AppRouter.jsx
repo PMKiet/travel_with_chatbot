@@ -16,15 +16,18 @@ export const AppRouter = () => {
     return (
         <>
             <Navigation />
-            <Routes>
-                <Route path='/' element={<Home />} />
-                <Route path='/rooms' element={<Rooms />} />
-                <Route path='/explore' element={<Explore />} />
-                <Route path='/explore/:id' element={<ExploreDetail />} />
 
-                <Route path='/contact' element={<Contact />} />
-                <Route path='/auth' element={<Auth />} />
-            </Routes>
+            <main className="pt-20">
+                <Routes>
+                    <Route path='/' element={<Home />} />
+                    <Route path='/rooms' element={<Rooms />} />
+                    <Route path='/explore' element={<Explore />} />
+                    <Route path='/explore/:id' element={<ExploreDetail />} />
+
+                    <Route path='/contact' element={<Contact />} />
+                    <Route path='/auth' element={<Auth />} />
+                </Routes>
+            </main>
         </>
     )
 }

@@ -24,10 +24,9 @@ export const Home = () => {
 
 
     return (
-        <main className="pt-20">
-            {/* banner */}
 
-            <section id="page-home" className="page">
+        <>
+            <section id="page-home" className="page" >
                 <div className="relative h-[80vh] flex items-center justify-center overflow-hidden">
                     <div className="absolute inset-0">
                         <img src={banner} alt="Núi cấm" className="w-full h-full object-cover brightness-50" />
@@ -71,7 +70,7 @@ export const Home = () => {
                         }
                     </div>
                 </div>
-            </section>
-        </main>
+            </section >
+        </>
     )
 }
