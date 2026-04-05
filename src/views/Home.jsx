@@ -17,6 +17,9 @@ import explore2 from '@/assets/images/explore2.jpeg'
 import explore3 from '@/assets/images/explore3.jpeg'
 import explore4 from '@/assets/images/explore4.jpeg'
 
+//from test
+import exploreData from '@/test/data_explore.json'
+
 export const Home = () => {
 
 
@@ -43,34 +46,29 @@ export const Home = () => {
                         <h2 className="text-4xl font-bold mt-4" data-i18n="explore_preview_title">Trải nghiệm không thể bỏ lỡ</h2>
                     </div>
                     <div id="explore-grid" className="grid md:grid-cols-4 gap-6">
-
-                        <Link to={'/explore/1'} className="relative h-80 rounded-2xl overflow-hidden group cursor-pointer" >
-                            <img src={explore1} className="w-full h-full object-cover group-hover:scale-110 transition duration-700" />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
-                                <h4 className="text-white font-bold text-lg">explore</h4>
-                            </div>
-                        </Link>
-
-                        <div className="relative h-80 rounded-2xl overflow-hidden group cursor-pointer" >
-                            <img src={explore2} className="w-full h-full object-cover group-hover:scale-110 transition duration-700" />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
-                                <h4 className="text-white font-bold text-lg">explore</h4>
-                            </div>
-                        </div>
-
-                        <div className="relative h-80 rounded-2xl overflow-hidden group cursor-pointer" >
-                            <img src={explore3} className="w-full h-full object-cover group-hover:scale-110 transition duration-700" />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
-                                <h4 className="text-white font-bold text-lg">explore</h4>
-                            </div>
-                        </div>
-
-                        <div className="relative h-80 rounded-2xl overflow-hidden group cursor-pointer" >
-                            <img src={explore4} className="w-full h-full object-cover group-hover:scale-110 transition duration-700" />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
-                                <h4 className="text-white font-bold text-lg">explore</h4>
-                            </div>
-                        </div>
+                        {
+                            exploreData && exploreData.map((item) => (
+                                <Link
+                                    key={item.id}
+                                    to={`/explore/${item.id}`}
+                                    className="relative h-80 rounded-2xl overflow-hidden group cursor-pointer"
+                                >
+                                    <img
+                                        src={item.thumb}
+                                        className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                                    />
+                                    <div
+                                        className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6"
+                                    >
+                                        <h4
+                                            className="text-white font-bold text-lg"
+                                        >
+                                            {item.title_vi}
+                                        </h4>
+                                    </div>
+                                </Link>
+                            ))
+                        }
                     </div>
                 </div>
             </section>

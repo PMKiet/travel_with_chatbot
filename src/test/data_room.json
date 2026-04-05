@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name_vi": "Phòng Sun-view Núi Cấm",
+        "price": 850000,
+        "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=600&q=80",
+        "status": "Available"
+    },
+    {
+        "id": 2,
+        "name_vi": "Bungalow Ven Suối",
+        "price": 1200000,
+        "image": "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=600&q=80",
+        "status": "Available"
+    },
+    {
+        "id": 3,
+        "name_vi": "Phòng Family Tà Pạ",
+        "price": 1800000,
+        "image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=600&q=80",
+        "status": "Available"
+    }
+]
