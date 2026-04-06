@@ -32,7 +32,7 @@ export const Auth = () => {
                     }
                 }))
 
-                // navigate('/dashboard')
+                navigate('/admin/dashboard')
             }
         }
     }

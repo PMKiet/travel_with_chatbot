@@ -6,7 +6,10 @@ import { Rooms } from '@/views/Rooms'
 import { Explore } from '@/views/explore/Explore'
 import { Contact } from '@/views/Contact'
 import { Auth } from '@/views/Auth'
+import { AdminDashboard } from '@/views/admin/AdminDashboard'
 
+//from middlewere
+import { ProtectedRoute } from '@/middlewere/ProtectedRoute'
 
 //from components
 import Navigation from '@/components/Navigaton'
@@ -26,6 +29,12 @@ export const AppRouter = () => {
 
                     <Route path='/contact' element={<Contact />} />
                     <Route path='/auth' element={<Auth />} />
+
+
+                    {/* Route for admin */}
+                    <Route element={<ProtectedRoute allowedRoles={['admin']} />}>
+                        <Route path='/admin/dashboard' element={<AdminDashboard />} />
+                    </Route>
                 </Routes>
             </main>
         </>
